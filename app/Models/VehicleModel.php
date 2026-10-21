@@ -27,5 +27,10 @@ class VehicleModel extends Model
     public function breakdowns(): HasMany
     {
         return $this->hasMany(Breakdown::class);
-    }    
+    }
+    
+    public function commonFaults(): HasMany
+    {
+        return $this->hasMany(CommonFault::class);
+    }
 }

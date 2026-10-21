@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BreakdownController;
 use App\Http\Controllers\BreakdownSolutionController;
+use App\Http\Controllers\CommonFaultController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\VehicleCatalogueController;
 use Illuminate\Support\Facades\Route;
@@ -55,6 +56,12 @@ Route::patch(
 )
 ->middleware('auth')
 ->name('breakdowns.solutions.accept');
+
+Route::get('/common-faults', [CommonFaultController::class, 'index'])
+    ->name('common-faults.index');
+
+Route::get('/common-faults/{fault}', [CommonFaultController::class, 'show'])
+    ->name('common-faults.show');    
 
 
 require __DIR__.'/auth.php';

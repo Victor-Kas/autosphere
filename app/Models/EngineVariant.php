@@ -24,4 +24,9 @@ class EngineVariant extends Model
     {
         return $this->hasMany(Breakdown::class);
     }    
+
+    public function commonFaults(): HasMany
+    {
+        return $this->hasMany(CommonFault::class);
+    }
 }

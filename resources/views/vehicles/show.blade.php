@@ -110,6 +110,32 @@
 
     </div>
 
+    <!-- Vehicle Knowledge Base -->
+    <div class="bg-primary text-white rounded-xl
+                p-8 mt-12 flex flex-wrap justify-between
+                items-center gap-6">
+
+        <div>
+            <h2 class="text-2xl font-bold mb-2">
+                Common Faults & Repairs
+            </h2>
+
+            <p class="text-slate-300">
+                Explore documented mechanical problems
+                associated with this vehicle.
+            </p>
+        </div>
+
+        <a href="{{ route('common-faults.index', [
+            'vehicle_model_id' => $vehicle->id
+        ]) }}"
+        class="bg-accent hover:bg-blue-700
+                px-6 py-3 rounded-lg font-semibold">
+            Explore Common Faults &rarr;
+        </a>
+
+    </div>
+
 </section>
 
 @endsection

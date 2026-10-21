@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Breakdown extends Model
@@ -36,5 +37,10 @@ class Breakdown extends Model
     public function solutions(): HasMany
     {
         return $this->hasMany(BreakdownSolution::class);
+    }
+
+    public function commonFaults(): BelongsToMany
+    {
+        return $this->belongsToMany(CommonFault::class)->withTimestamps();
     }
 }

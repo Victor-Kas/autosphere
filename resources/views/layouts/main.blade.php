@@ -38,6 +38,10 @@
                 class="hover:text-blue-400">
                     Breakdown Help
                 </a>
+                <a href="{{ route('common-faults.index') }}"
+                    class="hover:text-blue-400">
+                    Common Faults
+                </a>
 
                 <a href="#"
                    class="hover:text-blue-400">
